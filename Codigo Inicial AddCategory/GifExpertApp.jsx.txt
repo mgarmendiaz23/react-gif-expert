@@ -1,0 +1,47 @@
+
+
+-------------------------------------------------------------------------------------
+
+import { useState } from 'react';
+import { AddCategory } from './components/AddCategory';
+
+// Functional Component - usar el snipper: rafc + tab
+export const GifExpertApp = () => {
+
+    const [categories, setCategories] = useState(['One Punch', 'Dragon Ball', 'Julieta Venegas','Toro Almada', 'Greca'])
+
+    const onAddCategory = () => {
+        setCategories( ['Valorant', ...categories] )
+    }    
+
+    return (
+    // <> </> se llaman fragmentos: fragments
+    <>
+    
+        {/* titulo */}
+        <h1>Gif Expert App</h1>
+
+
+        {/* Input para busquedas */}
+        <AddCategory setCategories={ setCategories } />
+
+        {/* Result o: Grid de tarjetas/Items/Gifs */}
+        {/* <button onClick={ onAddCategory }>Agregar</button> */}
+        <ol>
+
+            { categories.map( category => {
+                    return <li key={ category }>{ category }</li>
+                }) 
+            }
+            
+        </ol>
+
+    </>
+    )
+}
+
+
+
+-------------------------------------------------------------------------------------
+
+

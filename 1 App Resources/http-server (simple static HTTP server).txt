@@ -1,0 +1,9 @@
+
+This is a Simple Static HTTP Server
+-- ----------------------------------------------- --
+https://www.npmjs.com/package/http-server
+
+To install
+-- Need to Install As Administrator.
+-- hit this command: npm install --global http-server
+-- ----------------------------------------------- --

@@ -1,0 +1,13 @@
+
+PAGE URL
+https://developers.giphy.com/docs/api/endpoint/#search
+
+-----------------------------------------------------------------------
+
+Gif URL
+api.giphy.com/v1/gifs/search
+
+api_key: string(required)	YOUR_API_KEY	GIPHY API Key.
+      q: string(required)	cheeseburgers
+
+-----------------------------------------------------------------------

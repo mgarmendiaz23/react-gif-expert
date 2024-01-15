@@ -1,0 +1,1 @@
+https://es.legacy.reactjs.org/docs/faq-structure.html

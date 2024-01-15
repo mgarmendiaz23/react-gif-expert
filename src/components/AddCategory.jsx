@@ -1,0 +1,47 @@
+import { useState } from "react"
+
+// Functional Component - usar el snipper: rafc + tab
+export const AddCategory = ( { onNewCategory } ) => {
+
+    const [inputValue, setinputValue] = useState('');
+
+    const onInputChange = ( { target } ) => {
+        // console.log( target.value  );
+        setinputValue( target.value );
+    }
+
+    const onSubmit = ( event ) => {
+
+        // Evita se haga un REFREESH DEL  NAVEGADOR WEB
+        event.preventDefault();
+        // console.log( inputValue );
+
+        // Valida que tenga valores
+        if( inputValue.trim().length <= 1 ) return;
+
+        // Agrega una nueva categoria.
+        // setCategories( categories =>  [ inputValue, ...categories] )
+        onNewCategory( inputValue.trim() );
+
+        // Limpia el componente input
+        setinputValue('');
+
+    }
+
+    return (
+
+        <form onSubmit={ onSubmit }>
+
+            <input 
+                type="text"
+                placeholder="Buscar Gifs"
+                value={ inputValue }
+                onChange={ onInputChange } // Mejor forma se obvia poner el event ya que se le envia lo mismo el event
+                // onChange={ (event) => onInputChange(event) }
+            />
+
+        </form>
+
+    )
+
+}
